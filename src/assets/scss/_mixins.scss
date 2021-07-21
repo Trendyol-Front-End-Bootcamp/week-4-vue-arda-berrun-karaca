@@ -1,0 +1,10 @@
+$sizes: (
+    "medium": 576px,
+    "large": 1024px
+);
+
+@mixin make-responsive($size) {
+    @media screen and (min-width: map-get($sizes, $size)) {
+        @content;
+    }
+}
